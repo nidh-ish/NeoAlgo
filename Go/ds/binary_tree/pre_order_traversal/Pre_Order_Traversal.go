@@ -18,7 +18,7 @@ type Node struct {
 
 /* This function prints thre pre order traversal of
 the tree recursively.*/
-func post_order(root *Node) {
+func pre_order(root *Node) {
 
 	// If we reach the end, return
 	if(root == nil) {
@@ -29,9 +29,9 @@ func post_order(root *Node) {
 	fmt.Print(root.data, " ")
 
 	// Call the function for left half
-	post_order(root.left)
+	pre_order(root.left)
 	// Then, call for the right half
-	post_order(root.right)
+	pre_order(root.right)
 }
 
 // This function creates a new node
